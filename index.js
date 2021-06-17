@@ -122,7 +122,7 @@ function showScore(){
    print("\n");
 
   }else{
-    print("/n");
+    print("\n");
     print(chalk.whiteBright.bold.bgMagenta("😁  Your final score is: "+ score));
     print("\n");
   }
