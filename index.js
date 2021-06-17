@@ -81,7 +81,7 @@ function welcome(){
   print("\n");
   print(chalk.blue.bold("Let's see How well do you know me?  🤨 "));
   print("\n");
-  print("Let's Begin! 😁 ")
+  print(chalk.green("Let's Begin! 😁 "));
   print("\n");
  
  }
@@ -117,12 +117,14 @@ function game(){
 
 function showScore(){
   if(score<0){
+    print("/n");
     print(chalk.whiteBright.bold.bgMagenta("😕  Your final score is: "+ score));
-  print("\n");
+   print("\n");
 
   }else{
-  print(chalk.whiteBright.bold.bgMagenta("😁  Your final score is: "+ score));
-  print("\n");
+    print("/n");
+    print(chalk.whiteBright.bold.bgMagenta("😁  Your final score is: "+ score));
+    print("\n");
   }
   
   print(chalk.green.bold("___________________________________________________\n"));
@@ -153,9 +155,9 @@ showScore();
 exit();
 function exit(){
 print("\n");
-print(chalk.green("Thank you for playing this quiz. Have a nice day😁\n"));
+print(chalk.magenta("Thank you for playing this quiz. Have a nice day😁\n"));
 
- var v = readlineSync.question(chalk.red("Do you want to play again?\n\nEnter YES or NO\n"));
+ var v = readlineSync.question(chalk.green("Do you want to play again?\n\nEnter YES or NO:\n"));
 
 if(v.toUpperCase()==="YES"){
   print("\n")
@@ -164,6 +166,7 @@ if(v.toUpperCase()==="YES"){
 }
 else{
   print("Okay Buddy see you in the next quiz 😉 ")
+  
 }
 
 }
